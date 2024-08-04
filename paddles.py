@@ -14,3 +14,9 @@ class Paddle(Turtle):
     def left_paddle(self):
         self.goto(x=-550, y=0)
 
+    def up(self):
+        self.speed("fastest")
+        self.setheading(90)
+        self.fd(20)
+        self.setheading(0)
+
