@@ -5,7 +5,7 @@ screen = Screen()
 score_board = ScoreBoard()
 
 # Screen Setups
-screen.setup(width=800, height=650)
+screen.setup(width=1200, height=660)
 screen.bgcolor('black')
 screen.title("Pong Game")
 screen.tracer(0, 0)
