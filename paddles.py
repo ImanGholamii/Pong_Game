@@ -15,14 +15,16 @@ class Paddle(Turtle):
         self.goto(x=-550, y=0)
 
     def up(self):
-        self.speed("fastest")
-        self.setheading(90)
-        self.fd(60)
-        self.setheading(0)
+        if self.ycor() < 200:
+            self.speed("fastest")
+            self.setheading(90)
+            self.fd(60)
+            self.setheading(0)
 
     def down(self):
-        self.speed("fastest")
-        self.setheading(270)
-        self.fd(60)
-        self.setheading(0)
+        if self.ycor() > -300:
+            self.speed("fastest")
+            self.setheading(270)
+            self.fd(60)
+            self.setheading(0)
 
