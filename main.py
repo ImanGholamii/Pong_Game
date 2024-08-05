@@ -1,6 +1,7 @@
 from turtle import Turtle, Screen
 from score_board import ScoreBoard
 from paddles import Paddle
+from ball import Ball
 
 # Screen Setups
 screen = Screen()
@@ -11,11 +12,15 @@ screen.tracer(0, 0)
 
 # objects
 score_board = ScoreBoard()
-right_paddle = Paddle()
+
 screen.tracer(1, 10)
+
+right_paddle = Paddle()
 right_paddle.right_paddle()
 left_paddle = Paddle()
 left_paddle.left_paddle()
+
+ball = Ball()
 # key events
 screen.tracer(2, 0)
 screen.listen()
