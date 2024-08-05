@@ -17,6 +17,12 @@ class Paddle(Turtle):
     def up(self):
         self.speed("fastest")
         self.setheading(90)
-        self.fd(20)
+        self.fd(60)
+        self.setheading(0)
+
+    def down(self):
+        self.speed("fastest")
+        self.setheading(270)
+        self.fd(60)
         self.setheading(0)
 
