@@ -22,7 +22,7 @@ left_paddle.left_paddle()
 
 ball = Ball()
 # key events
-screen.tracer(2, 0)
+
 screen.listen()
 screen.onkey(right_paddle.up, 'Up')
 screen.onkey(right_paddle.down, 'Down')
