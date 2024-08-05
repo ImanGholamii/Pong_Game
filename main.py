@@ -15,10 +15,8 @@ score_board = ScoreBoard()
 
 screen.tracer(1, 10)
 
-right_paddle = Paddle()
-right_paddle.right_paddle()
-left_paddle = Paddle()
-left_paddle.left_paddle()
+right_paddle = Paddle((550, 0))
+left_paddle = Paddle((-550, 0))
 
 ball = Ball()
 # key events
