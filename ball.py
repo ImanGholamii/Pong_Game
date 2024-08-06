@@ -17,10 +17,10 @@ class Ball(Turtle):
         new_y = self.ycor() + self.y_move
         self.goto(new_x, new_y)
 
-    def bounce(self):
+    def bounce_y(self):
         """Reverse the Y coordinates"""
         self.y_move *= -1
 
-    def paddle_collision(self):
+    def bounce_x(self):
         """Reverse the X coordinates"""
         self.x_move *= -1
