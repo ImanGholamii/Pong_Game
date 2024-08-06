@@ -16,7 +16,8 @@ class ScoreBoard(Turtle):
         self.setpos(x=30, y=300)
         self.write(arg=f"{self.score}", align=ALIGNMENT, font=FONT)
         self.draw_vertical_line()
-        self.draw_horizontal_line()
+        self.draw_horizontal_line(x=-600, y=300)
+        self.draw_horizontal_line(x=-600, y=-300)
 
     def draw_vertical_line(self):
         self.teleport(x=0, y=300)
@@ -28,9 +29,9 @@ class ScoreBoard(Turtle):
             self.penup()
             self.fd(20)
 
-    def draw_horizontal_line(self):
-        self.teleport(x=-600, y=300)
-        while self.xcor() < 600:
+    def draw_horizontal_line(self, x, y):
+        self.teleport(x, y)
+        while self.xcor() < -x:
             self.setheading(0)
             self.pensize(width=3)
             self.pendown()
