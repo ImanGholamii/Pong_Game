@@ -7,32 +7,17 @@ FONT = ("Arial", 20, "normal")
 class ScoreBoard(Turtle):
     def __init__(self):
         super().__init__()
-        self.score = 0
+        self.point = 0
         self.color("white")
         self.hideturtle()
+
+    def add_point(self):
+        self.point += 1
+
+    def show_point(self):
         self.penup()
         self.setpos(x=-30, y=300)
-        self.write(arg=f"{self.score}", align=ALIGNMENT, font=FONT)
+        self.write(arg=f"{self.point}", align=ALIGNMENT, font=FONT)
         self.setpos(x=30, y=300)
-        self.write(arg=f"{self.score}", align=ALIGNMENT, font=FONT)
-        self.draw_vertical_line()
-        self.draw_horizontal_line(x=-600, y=300)
-        self.draw_horizontal_line(x=-600, y=-300)
+        self.write(arg=f"{self.point}", align=ALIGNMENT, font=FONT)
 
-    def draw_vertical_line(self):
-        self.teleport(x=0, y=300)
-        self.setheading(-90)
-        while self.ycor() > -400:
-            self.pensize(width=3)
-            self.pendown()
-            self.fd(20)
-            self.penup()
-            self.fd(20)
-
-    def draw_horizontal_line(self, x, y):
-        self.teleport(x, y)
-        while self.xcor() < -x:
-            self.setheading(0)
-            self.pensize(width=3)
-            self.pendown()
-            self.fd(20)
