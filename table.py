@@ -1,6 +1,6 @@
 from turtle import Turtle
 
-class board(Turtle):
+class Board(Turtle):
     def __init__(self):
         super().__init__()
         self.color("white")
