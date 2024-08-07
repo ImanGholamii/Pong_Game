@@ -5,8 +5,9 @@ FONT = ("Arial", 20, "normal")
 
 
 class ScoreBoard(Turtle):
-    def __init__(self):
+    def __init__(self, position: tuple):
         super().__init__()
+        self.position = position
         self.point = 0
         self.color("white")
         self.hideturtle()
@@ -16,8 +17,5 @@ class ScoreBoard(Turtle):
 
     def show_point(self):
         self.penup()
-        self.setpos(x=-30, y=300)
+        self.setpos(self.position)
         self.write(arg=f"{self.point}", align=ALIGNMENT, font=FONT)
-        self.setpos(x=30, y=300)
-        self.write(arg=f"{self.point}", align=ALIGNMENT, font=FONT)
-
