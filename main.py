@@ -45,10 +45,12 @@ while game_is_on:
     if ball.xcor() > 530 and ball.distance(right_paddle) < 50 or ball.xcor() < -530 and ball.distance(left_paddle) < 50:
         ball.bounce_x()
     elif ball.xcor() > 550:
+        ball.restart()
         ball.bounce_x()
         left_score_board.clear()
         left_score_board.add_point()
     elif ball.xcor() < -550:
+        ball.restart()
         ball.bounce_x()
         right_score_board.clear()
         right_score_board.add_point()
