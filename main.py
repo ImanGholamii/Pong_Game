@@ -4,6 +4,7 @@ from paddles import Paddle
 from ball import Ball
 from time import sleep
 from table import Board
+
 # Screen Setups
 screen = Screen()
 screen.setup(width=1200, height=660)
@@ -12,7 +13,8 @@ screen.title("Pong Game")
 screen.tracer(0, 0)
 
 # objects
-score_board = ScoreBoard()
+right_score_board = ScoreBoard((30, 300))
+left_score_board = ScoreBoard((-30, 300))
 bord = Board()
 # screen.tracer(1, 10)
 
@@ -31,7 +33,8 @@ screen.onkey(left_paddle.down, 's')
 game_is_on = True
 while game_is_on:
     sleep(0.03)
-    score_board.show_point()
+    right_score_board.show_point()
+    left_score_board.show_point()
     screen.update()
     ball.move()
     # Detect collision with Wall
@@ -41,9 +44,13 @@ while game_is_on:
     # Detect collision with Paddle and add points
     if ball.xcor() > 530 and ball.distance(right_paddle) < 50 or ball.xcor() < -530 and ball.distance(left_paddle) < 50:
         ball.bounce_x()
-    elif ball.xcor() > 550 or ball.xcor() < -550:
+    elif ball.xcor() > 550:
         ball.bounce_x()
-        score_board.clear()
-        score_board.add_point()
+        right_score_board.clear()
+        right_score_board.add_point()
+    elif ball.xcor() < -550:
+        ball.bounce_x()
+        left_score_board.clear()
+        left_score_board.add_point()
 
 screen.exitonclick()
