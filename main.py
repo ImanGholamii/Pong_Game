@@ -46,11 +46,13 @@ while game_is_on:
         ball.bounce_x()
     elif ball.xcor() > 550:
         ball.restart()
+        ball.increase_speed()
         ball.bounce_x()
         left_score_board.clear()
         left_score_board.add_point()
     elif ball.xcor() < -550:
         ball.restart()
+        ball.increase_speed()
         ball.bounce_x()
         right_score_board.clear()
         right_score_board.add_point()

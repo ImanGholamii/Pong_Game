@@ -28,3 +28,8 @@ class Ball(Turtle):
 
     def restart(self):
         self.setposition(x=0, y=0)
+
+    def increase_speed(self):
+        self.x_move *= 1.10
+        self.y_move *= 1.10
+
