@@ -25,3 +25,6 @@ class Ball(Turtle):
     def bounce_x(self):
         """Reverse the X coordinates"""
         self.x_move *= -1
+
+    def restart(self):
+        self.setposition(x=0, y=0)
