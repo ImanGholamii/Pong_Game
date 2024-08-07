@@ -1,5 +1,6 @@
 from turtle import Turtle
 
+
 class Board(Turtle):
     def __init__(self):
         super().__init__()
@@ -8,7 +9,6 @@ class Board(Turtle):
         self.draw_vertical_line()
         self.draw_horizontal_line(x=-600, y=300)
         self.draw_horizontal_line(x=-600, y=-300)
-
 
     def draw_vertical_line(self):
         self.teleport(x=0, y=300)

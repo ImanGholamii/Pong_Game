@@ -4,6 +4,7 @@ from random import randint
 
 class Ball(Turtle):
     random_number = randint(0, 360)
+
     def __init__(self):
         super().__init__()
         self.shape("circle")
