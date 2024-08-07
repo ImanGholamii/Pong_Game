@@ -19,3 +19,7 @@ class ScoreBoard(Turtle):
         self.penup()
         self.setpos(self.position)
         self.write(arg=f"{self.point}", align=ALIGNMENT, font=FONT)
+
+    def end_game(self):
+        if self.point == 9:
+            return True
